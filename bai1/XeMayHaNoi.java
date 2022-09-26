@@ -51,4 +51,23 @@ public class XeMayHaNoi extends XeMay {
             mangxe[i].hienthi();
         }
     }
+
+    public void Sort() {
+        for (int i = 0; i < mangxe.length - 1; i++) {
+            for (int j = i + 1; j < mangxe.length; j++) {
+                if (mangxe[i].bienso.compareTo(mangxe[j].bienso) > 0) {
+                    XeMay tmp = mangxe[i];
+                    mangxe[i] = mangxe[j];
+                    mangxe[j] = tmp;
+                }
+            }
+        }
+    }
+
+    public void Search(String bienSo) {
+        for (int i = 0; i < mangxe.length; i++) {
+            if (mangxe[i].bienso.toUpperCase().contains(bienSo))
+                mangxe[i].hienthi();
+        }
+    }
 }

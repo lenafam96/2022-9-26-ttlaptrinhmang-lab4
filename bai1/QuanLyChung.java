@@ -5,6 +5,9 @@ import java.util.Scanner;
 public class QuanLyChung {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        XeMayHoaBinh xHb = new XeMayHoaBinh();
+        XeMayHaNoi xHn = new XeMayHaNoi();
+        String luachon = "";
         int n = 0;
         while (true) {
             System.out.println(
@@ -14,17 +17,34 @@ public class QuanLyChung {
             n = Integer.parseInt(sc.nextLine());
             switch (n) {
                 case 1:
-                    XeMayHoaBinh xHb = new XeMayHoaBinh();
                     xHb.nhap(sc);
                     break;
                 case 2:
-                    XeMayHaNoi xHn = new XeMayHaNoi();
                     xHn.nhap(sc);
                     break;
                 case 3:
                     System.out.printf("(Hoa Binh/Ha Noi)?: ");
-                    String luachon = sc.nextLine();
-                    if(luachon.toUpperCase().equals("HOA BINH"))
+                    luachon = sc.nextLine();
+                    if (luachon.toUpperCase().equals("HOA BINH")) {
+                        xHb.Sort();
+                        xHb.hienthi();
+                    } else {
+                        xHn.Sort();
+                        xHn.hienthi();
+                    }
+                case 4:
+                    System.out.printf("(Hoa Binh/Ha Noi)?: ");
+                    luachon = sc.nextLine();
+                    System.out.printf("Nhap bien so xe can tim: ");
+                    String bienSo = sc.nextLine();
+                    if (luachon.toUpperCase().equals("HOA BINH")) {
+                        xHb.Search(bienSo);
+                    } else {
+                        xHn.Search(bienSo);
+                    }
+                case 5:
+                    System.out.printf("(Hoa Binh/Ha Noi)?: ");
+                    luachon = sc.nextLine();
                 default:
                     break;
             }
