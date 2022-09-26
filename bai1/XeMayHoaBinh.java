@@ -33,21 +33,28 @@ public class XeMayHoaBinh extends XeMay {
     }
 
     public void nhap(Scanner sc) {
-        System.out.printf("Nhap  vao so luong xe may o hoa binh: ");
+        System.out.printf("Nhap vao so luong xe may Hoa Binh: ");
         n = Integer.parseInt(sc.nextLine());
         mangxe = new XeMay[n];
         for (int i = 0; i < n; i++) {
-            System.out.println("Nhap thong tin xe  may thu :" + (i + 1));
+            System.out.println("\n*Nhap thong tin xe may thu " + (i + 1));
             mangxe[i] = new XeMay();
             mangxe[i].nhap(sc);
         }
     }
 
     public void hienthi() {
+        System.out.printf("+%-10s+%-20s+%-15s+%-15s+\n", "-".repeat(10), "-".repeat(
+                20), "-".repeat(15), "-".repeat(15));
+        System.out.printf("|%-10s|%-20s|%-15s|%-15s|\n", "Bien so", "Loai xe",
+                "Mau xe", "Gia tien");
+        System.out.printf("+%-10s+%-20s+%-15s+%-15s+\n", "-".repeat(10), "-".repeat(
+                20), "-".repeat(15), "-".repeat(15));
         for (int i = 0; i < n; i++) {
-            System.out.println("Thong tin xe  may thu :" + (i + 1));
             mangxe[i].hienthi();
         }
+        System.out.printf("+%-10s+%-20s+%-15s+%-15s+\n", "-".repeat(10), "-".repeat(
+                20), "-".repeat(15), "-".repeat(15));
     }
 
     public void Sort() {
@@ -63,9 +70,17 @@ public class XeMayHoaBinh extends XeMay {
     }
 
     public void Search(String bienSo) {
+        System.out.printf("+%-10s+%-20s+%-15s+%-15s+\n", "-".repeat(10), "-".repeat(
+                20), "-".repeat(15), "-".repeat(15));
+        System.out.printf("|%-10s|%-20s|%-15s|%-15s|\n", "Bien so", "Loai xe",
+                "Mau xe", "Gia tien");
+        System.out.printf("+%-10s+%-20s+%-15s+%-15s+\n", "-".repeat(10), "-".repeat(
+                20), "-".repeat(15), "-".repeat(15));
         for (int i = 0; i < mangxe.length; i++) {
             if (mangxe[i].bienso.toUpperCase().contains(bienSo))
                 mangxe[i].hienthi();
         }
+        System.out.printf("+%-10s+%-20s+%-15s+%-15s+\n", "-".repeat(10), "-".repeat(
+                20), "-".repeat(15), "-".repeat(15));
     }
 }

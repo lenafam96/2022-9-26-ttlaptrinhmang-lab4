@@ -1,0 +1,42 @@
+1
+2
+sv01
+Thai Thi Quynh Ngan
+Nu
+05/04/2003
+Nghe An
+sv02
+Le Cong Minh
+Nam
+02/10/1996
+Hoa Binh
+2
+4
+sv01
+DHMT13A1HN
+Vat ly
+5
+10
+9
+8.98
+sv02
+DHTI15A8HN
+Vat ly
+2
+10
+7
+8.31
+sv02
+DHTI15A8HN
+Xac suat thong ke
+1
+9.3
+7
+8.43
+sv01
+DHMT13A1HN
+Lap trinh mang
+6
+9.2
+14
+8.90

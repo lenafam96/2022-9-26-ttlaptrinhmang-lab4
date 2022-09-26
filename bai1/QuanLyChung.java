@@ -11,7 +11,7 @@ public class QuanLyChung {
         int n = 0;
         while (true) {
             System.out.println(
-                    "===Menu===\n1.Nhap thong tin n xe Hoa Binh\n2.Nhap thong tin n xe Ha Noi\n3.Sap xep danh sach tang dan theo bien so xe\n3.Tim kiem thong tin xe theo bien so xe\n5.Thong ke so luong xe dang quan ly\n6.Thoat\n");
+                    "\n\n\n\t===Menu===\n1.Nhap thong tin n xe Hoa Binh\n2.Nhap thong tin n xe Ha Noi\n3.Sap xep danh sach tang dan theo bien so xe\n4.Tim kiem thong tin xe theo bien so xe\n5.Thong ke so luong xe dang quan ly\n6.Thoat\n");
 
             System.out.printf("Nhap lua chon: ");
             n = Integer.parseInt(sc.nextLine());
@@ -26,12 +26,15 @@ public class QuanLyChung {
                     System.out.printf("(Hoa Binh/Ha Noi)?: ");
                     luachon = sc.nextLine();
                     if (luachon.toUpperCase().equals("HOA BINH")) {
+                        System.out.println("\t\t=== Danh sach xe may Hoa Binh ===\n\n");
                         xHb.Sort();
                         xHb.hienthi();
                     } else {
+                        System.out.println("\t\t=== Danh sach xe may Ha Noi ===\n\n");
                         xHn.Sort();
                         xHn.hienthi();
                     }
+                    break;
                 case 4:
                     System.out.printf("(Hoa Binh/Ha Noi)?: ");
                     luachon = sc.nextLine();
@@ -42,13 +45,22 @@ public class QuanLyChung {
                     } else {
                         xHn.Search(bienSo);
                     }
+                    break;
                 case 5:
                     System.out.printf("(Hoa Binh/Ha Noi)?: ");
                     luachon = sc.nextLine();
+                    if (luachon.toUpperCase().equals("HOA BINH")) {
+                        System.out.println("So xe may tai Hoa Binh la " + xHb.getN() + " chiec");
+                    } else {
+                        System.out.println("So xe may tai Ha Noi la " + xHn.getN() + " chiec");
+                    }
+                    break;
+                case 6:
+                    sc.close();
+                    return;
                 default:
                     break;
             }
         }
-        sc.close();
     }
 }

@@ -18,6 +18,38 @@ public class XeMay implements IXe {
         this.giatien = giatien;
     }
 
+    public String getBienso() {
+        return bienso;
+    }
+
+    public void setBienso(String bienso) {
+        this.bienso = bienso;
+    }
+
+    public String getLoaixe() {
+        return loaixe;
+    }
+
+    public void setLoaixe(String loaixe) {
+        this.loaixe = loaixe;
+    }
+
+    public String getMauxe() {
+        return mauxe;
+    }
+
+    public void setMauxe(String mauxe) {
+        this.mauxe = mauxe;
+    }
+
+    public float getGiatien() {
+        return giatien;
+    }
+
+    public void setGiatien(float giatien) {
+        this.giatien = giatien;
+    }
+
     @Override
     public void nhap(Scanner sc) {
         System.out.printf("Nhap bien so xe: ");
@@ -28,16 +60,12 @@ public class XeMay implements IXe {
         this.mauxe = sc.nextLine();
         System.out.printf("Nhap gia xe: ");
         this.giatien = Float.parseFloat(sc.nextLine());
-
     }
 
     @Override
     public void hienthi() {
-        System.out.println("Bien so xe: " + this.bienso);
-        System.out.println("Loai xe: " + this.loaixe);
-        System.out.println("Mau xe: " + this.mauxe);
-        System.out.println("Gia xe: " + this.giatien);
+        System.out.printf("|%-10s|%-20s|%-15s|%15.2f|\n", this.getBienso().toUpperCase(),
+                this.getLoaixe().toUpperCase(),
+                this.getMauxe().toUpperCase(), this.getGiatien());
     }
 }
-
-    
