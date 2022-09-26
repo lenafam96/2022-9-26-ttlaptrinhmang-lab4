@@ -7,7 +7,7 @@ public class StudentMarkTotal extends StudentMark {
     private float everageMark;
 
     public StudentMarkTotal() {
-
+        super();
     }
 
     public StudentMarkTotal(String stuId, String className, String subjectName, int semester, float mark,
